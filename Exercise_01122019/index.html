@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="dataApp">
+<head>
+    <title>Clock!</title>
+    <script src="angular.js"></script>
+    <script src="bootstrap.js"></script>
+
+    <script src="calc.js"></script>
+</head>
+<body >
+    <div ng-controller="calcCtrl">
+        <p>X = <input type="number" ng-model="x"></p>
+        <select ng-model = "oper">
+            <option value="plus">+</option>
+            <option value="minus">-</option>
+            <option value="multiple">*</option>
+            <option value="divide">/</option>
+        </select>
+        <p>Y = <input type="number" ng-model="y"></p>
+        <p>Result = {{result}} </p>
+        <p>Modify the operator to calculate the result</p>
+        <p ng-if="ifDivideByZero" style="color:red">Do not divide by zero ! </p>
+    </div>
+    
+    <br>
+</body>
+</html>
